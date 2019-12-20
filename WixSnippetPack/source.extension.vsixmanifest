@@ -4,8 +4,8 @@
         <Identity Id="60753327-2b22-423d-a1b7-a41cd0946b10" Version="1.0" Language="en-US" Publisher="Abubakr Mahdi" />
         <DisplayName>WixSnippetPack</DisplayName>
         <Description xml:space="preserve">A snippet pack for Visual Studio , help in creatng wix installer xml elements faster.</Description>
-        <Icon>Resources\Icon.png</Icon>
-        <PreviewImage>Resources\Preview.png</PreviewImage>
+        <Icon>Icon.png</Icon>
+        <PreviewImage>Preview.png</PreviewImage>
         <Tags>snippets , wix tool set, wix installer xml, xml</Tags>
     </Metadata>
     <Installation>
