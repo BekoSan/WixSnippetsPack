@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>
+      <!-- _locID_text="title" _locComment="" -->New File Component Element</Title>
+    <Author>Abubakr Mahdi</Author>
+    <Shortcut>nFComp</Shortcut>
+    <Description>
+      <!-- _locID_text="description" _locComment="" -->Wix snippet for new File Component element</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>id</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->File Component Id.</ToolTip>
+        <Default>cmpNewFile</Default>
+      </Literal>
+       <Literal>
+        <ID>guid</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->File Component guid.</ToolTip>
+        <Default>Your GUID here</Default>
+      </Literal>
+       <Literal>
+        <ID>sourceFile</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->The full path of your file.</ToolTip>
+        <Default>fileName.extension</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="XML"><![CDATA[<Component Id="$id$"
+        Guid="$guid$">
+        <File Source="$sourceFile$" />
+      </Component>]]></Code>
+    </Snippet>
+</CodeSnippet>
+
+
+
+

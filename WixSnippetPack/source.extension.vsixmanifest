@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="60753327-2b22-423d-a1b7-a41cd0946b10" Version="1.0" Language="en-US" Publisher="Abubakr Mahdi" />
+        <DisplayName>WixSnippetPack</DisplayName>
+        <Description xml:space="preserve">A snippet pack for Visual Studio , help in creatng wix installer xml elements faster.</Description>
+        <Icon>Resources\Icon.png</Icon>
+        <PreviewImage>Resources\Preview.png</PreviewImage>
+        <Tags>snippets , wix tool set, wix installer xml, xml</Tags>
+    </Metadata>
+    <Installation>
+        <!--Microsoft.VisualStudio.Pro includes all SKUs such as Community, Pro, Ultimate and Enterprise-->
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="14.0" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="15.0" />
+        <InstallationTarget Version="16.0" Id="Microsoft.VisualStudio.Pro" />
+    </Installation>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,16.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Snippets\snippets.pkgdef" />
+    </Assets>
+</PackageManifest>

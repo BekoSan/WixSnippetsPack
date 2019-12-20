@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>
+      <!-- _locID_text="title" _locComment="" -->New Directory Component Element</Title>
+    <Author>Abubakr Mahdi</Author>
+    <Shortcut>nDComp</Shortcut>
+    <Description>
+      <!-- _locID_text="description" _locComment="" -->Wix snippet for new Directory Component element</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>id</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->Directory Component Id.</ToolTip>
+        <Default>cmpNewDirectory</Default>
+      </Literal>
+       <Literal>
+        <ID>guid</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->Directory Component guid.</ToolTip>
+        <Default>Your GUID here</Default>
+      </Literal>
+       <Literal>
+        <ID>dirName</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->Referenced directory element id.</ToolTip>
+        <Default>ReferenceDirectoryElementId</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="XML"><![CDATA[<Component Id="$id$"
+      Guid="$guid$"
+      Directory="$dirName$">
+        <CreateFolder />
+      </Component>]]></Code>
+    </Snippet>
+</CodeSnippet>
+
+
+

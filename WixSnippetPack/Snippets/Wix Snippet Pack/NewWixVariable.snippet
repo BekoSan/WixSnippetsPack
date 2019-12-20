@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>
+      <!-- _locID_text="title" _locComment="" -->New Wix Variable Element</Title>
+    <Author>Abubakr Mahdi</Author>
+    <Shortcut>nWVar</Shortcut>
+    <Description>
+      <!-- _locID_text="description" _locComment="" -->Wix snippet for new wix variable element</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>value</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->Variable value.</ToolTip>
+        <Default>value1</Default>
+      </Literal>
+       <Literal>
+        <ID>id</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->Variable Id.</ToolTip>
+        <Default>newWixVar</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="XML"><![CDATA[  <WixVariable Id="$id$"
+    Value="$value$"/>$1]]></Code>
+    </Snippet>
+</CodeSnippet>

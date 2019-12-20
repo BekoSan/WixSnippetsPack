@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>
+      <!-- _locID_text="title" _locComment="" -->New text control</Title>
+    <Author>Abubakr Mahdi</Author>
+    <Shortcut>nText</Shortcut>
+    <Description>
+      <!-- _locID_text="description" _locComment="" -->Wix snippet for new text control</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+       <Literal>
+        <ID>id</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->Text control Id.</ToolTip>
+        <Default>textControl1</Default>
+      </Literal>
+      <Literal>
+        <ID>text</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->Text control text.</ToolTip>
+        <Default>sample Text</Default>
+      </Literal>
+       <Literal>
+        <ID>h</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->The height of control.</ToolTip>
+        <Default>17</Default>
+      </Literal>
+      <Literal>
+        <ID>w</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->The width of control.</ToolTip>
+        <Default>200</Default>
+      </Literal>
+       <Literal>
+        <ID>x</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->The x point of control.</ToolTip>
+        <Default>50</Default>
+      </Literal>
+      <Literal>
+        <ID>y</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->The y point of control.</ToolTip>
+        <Default>50</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="XML"><![CDATA[<Control
+Id="$id$"
+Type="Text"
+Text="$text$"
+Height="$h$"
+Width="$w$"
+X="$x$"
+Y="$y$" />$1]]></Code>
+    </Snippet>
+</CodeSnippet>
+
+

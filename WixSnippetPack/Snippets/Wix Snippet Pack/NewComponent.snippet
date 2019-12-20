@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>
+      <!-- _locID_text="title" _locComment="" -->New Component Element</Title>
+    <Author>Abubakr Mahdi</Author>
+    <Shortcut>nComp</Shortcut>
+    <Description>
+      <!-- _locID_text="description" _locComment="" -->Wix snippet for new Component element</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>id</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->Component Id.</ToolTip>
+        <Default>Component1</Default>
+      </Literal>
+       <Literal>
+        <ID>guid</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->Component guid.</ToolTip>
+        <Default>Your GUID here</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="XML"><![CDATA[<Component Id="$id$" Guid="$guid$">
+      </Component>]]></Code>
+    </Snippet>
+</CodeSnippet>

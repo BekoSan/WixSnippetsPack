@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>
+      <!-- _locID_text="title" _locComment="" -->New Sql Server Component Group</Title>
+    <Author>Abubakr Mahdi</Author>
+    <Shortcut>sqlServ</Shortcut>
+    <Description>
+      <!-- _locID_text="description" _locComment="" -->Wix snippet for new Sql Server Component Group</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>sourceFile</ID>
+        <ToolTip>
+          <!-- _locID_text="tooltip" _locComment="" -->Setup file of sql server instance.</ToolTip>
+        <Default>SqlServerInstanceSetupFile</Default>
+      </Literal>
+       
+    </Declarations>
+    <Code Language="XML"><![CDATA[ <?define SqlInstanceName=MSSQLSERVER8?>
+    <?define SqlInstallCommand=/ACTION=Install /Q /
+IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine /
+INSTANCENAME=$(var.SqlInstanceName) /SQLSYSADMINACCOUNTS=BUILTIN\
+Administrators /SECURITYMODE=WIN  ?>
+    <?define SqlUninstallCommand=/ACTION=Uninstall /Q /
+FEATURES=SQLEngine /INSTANCENAME=$(var.SqlInstanceName) ?>
+    <?define SqlRepairCommand=/ACTION=Repair /Q /FEATURES=SQLEngine
+/INSTANCENAME=$(var.SqlInstanceName) ?>
+    <Fragment>
+      <util:RegistrySearch Id="regsearchSqlInstanceFound"
+      Root="HKLM"
+      Key="SOFTWARE\Microsoft\Microsoft SQLServer\Instance Names\SQL"
+      Value="$(var.SqlInstanceName)"
+      Result="exists"
+      Variable="SqlInstanceFound"/>
+      <PackageGroup Id="SqlServerPackageGroup">
+        <ExePackage SourceFile="$sourceFile$"
+        DetectCondition="SqlInstanceFound"
+        InstallCommand="$(var.SqlInstallCommand)"
+        UninstallCommand="$(var.SqlUninstallCommand)"
+        RepairCommand="$(var.SqlRepairCommand)" />
+      </PackageGroup>]]></Code>
+    </Snippet>
+</CodeSnippet>  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
