@@ -49,12 +49,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Icon.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Resources\Preview.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
+    <Content Include="Resources\Icon.png" />
+    <Content Include="Resources\Preview.png" />
     <None Include="readme.md" />
     <Content Include="Resources\PreviewSnippet.gif" />
     <Content Include="Snippets\Wix Snippet Pack\NewComponent.snippet">
