@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="DapperTempleteExtension.565c50ef-5d42-4ec0-a5aa-2da278e803b8" Version="1.0" Language="en-US" Publisher="Abubakr Mahdi" />
+        <Identity Id="DapperTempleteExtension.565c50ef-5d42-4ec0-a5aa-2da278e803b8" Version="1.1" Language="en-US" Publisher="Abubakr Mahdi" />
         <DisplayName>DapperDALProject</DisplayName>
         <Description xml:space="preserve">Adds a visual studio C# library  project templete (DAL) Data Access Layer, that helps working  and connect with sql sever database using app.config file connection string , it also conatins methods that creates and gets the data from data base and save data to data base using data model classes.
 using Dapper ORM.</Description>
@@ -11,12 +11,14 @@ using Dapper ORM.</Description>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0, 16.0)" />
+        <InstallationTarget Version="[16.0,17.0)" Id="Microsoft.VisualStudio.Enterprise" />
+        <InstallationTarget Version="[16.0,17.0)" Id="Microsoft.VisualStudio.Community" />
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
     </Dependencies>
     <Assets>
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" TargetVersion="1.0" d:TargetPath="ProjectTemplates\DapperORMProjectTempl.zip" />
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" TargetVersion="1.1" d:TargetPath="ProjectTemplates\DapperORMProjectTempl.zip" />
     </Assets>
     <Prerequisites>
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.8.27729.1,16.0)" DisplayName="Visual Studio core editor" />
